@@ -2,7 +2,7 @@
 
 [Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/abs/2402.00530)
 
-This is the repo for the Superfiltering project, which introduces a method astonishingly utilizes small GPT2 model to successfully filter out the high-quality subset from existing GPT4-generated instruction tuning dataset.
+This is the repo for the Superfiltering project, which introduces a method **astonishingly utilizes small GPT2 model to successfully filter out the high-quality subset from existing GPT4-generated instruction tuning dataset.**
 
 The repo contains:
 
