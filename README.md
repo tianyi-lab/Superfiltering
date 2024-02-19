@@ -50,9 +50,9 @@ Extensive experiments validate the efficacy and efficiency of our approach.
 
 ## Highlights
 
-* We reveal the strong consistency between small and large LLMs in perceiving and evaluating the difficulty of instruction tuning data, which provides insights into understanding the difference between small and large models. 
-* We propose the first method of Superfiltering that utilizes a small LM, e.g., GPT-2 (124M), to select data for instruction tuning and brings significant speedups to the LLM finetuning pipeline. 
-* Superfiltering is a plug-and-play method that precises in allocating high-quality and informative data improving LLM instruction tuning. 
+* We reveal the **strong consistency between small and large LLMs in perceiving and evaluating the difficulty of instruction tuning data**, which provides insights into understanding the difference between small and large models. 
+* We propose the first method of Superfiltering that utilizes **a small LM, e.g., GPT-2 (124M), to select data for instruction tuning and brings significant speedups to the LLM finetuning pipeline**. 
+* Superfiltering is a **plug-and-play** method that precises in **allocating high-quality and informative data** improving LLM instruction tuning. 
 
 ## Install
 
