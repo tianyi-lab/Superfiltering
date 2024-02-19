@@ -1,4 +1,4 @@
-# Superfiltering
+# Superfiltering: Weak-to-Strong Data Filtering
 
 [Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/abs/2402.00530)
 
