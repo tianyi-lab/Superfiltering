@@ -87,7 +87,7 @@ It takes about 15 minutes for the whole process.
 ## Data
 
 The Alpaca Data with GPT2-based IFD scores can be found in ```data/data_with_ifd/alpaca_data_gpt2_data.json```.<br>
-The Alpaca-GPT4 Data with GPT2-based IFD scores can be found in ```data/data_with_ifd/alpaca_gpt4_data_gpt2_data.json``.<br>
+The Alpaca-GPT4 Data with GPT2-based IFD scores can be found in ```data/data_with_ifd/alpaca_gpt4_data_gpt2_data.json```.<br>
 
 To select the subset data from these datasets, you can directly run ```bash scripts/step3_select_data.sh``` in above Step 3. 
 
