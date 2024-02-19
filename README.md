@@ -14,6 +14,7 @@ The repo contains:
 - The data selected by Superfiltering.
 - The model checkpoints (7B) that were trained using our Superfiltering.
 
+(This repo is partially originated from [Cherry_LLM](https://github.com/MingLiiii/Cherry_LLM) and [Reflection_Tuning](https://github.com/tianyi-lab/Reflection_Tuning).)<br>
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
