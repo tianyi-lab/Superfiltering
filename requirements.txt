@@ -1,0 +1,5 @@
+numpy
+transformers
+sentencepiece
+tqdm
+scipy
