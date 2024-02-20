@@ -18,7 +18,7 @@ The repo contains:
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
-- [2024/02] We added the codes and introduction for **Superfiltering with Diveristy**, which can further compress the selected data to approximately 2%. 
+- [2024/02] We added the codes and introduction for **Superfiltering with Diveristy** version, which can further compress the selected data to approximately **2%**. 
 - [2024/02] We updated the repo of Superfiltering in which code and data were released. 
 - [2024/01] We released the Superfiltering paper!
 
@@ -75,6 +75,8 @@ Note: The calculation of IFD scores only needs the ```transformers``` package, t
 
 ## Run Code
 
+### Superfiltering
+
 1. Calculate IFD scores
 
 ```
@@ -106,8 +108,26 @@ bash scripts/step3_select_data.sh
 ```sample_rate```: How much data do you need? Here we only provide the percentage version, you can slightly modify the code to select the exact number you want. 
 
 Note: The Step 1 code is the ```batch_size=1``` version, it takes about 15 minutes to process the whole Alpaca dataset. We release this version and split the whole process into 3 steps for better controllability. 
-You can directly run the above 3 scripts to get a better understand of our codes. 
+You can directly run the above 3 scripts to get a better understanding of our codes. 
 It takes about 15 minutes for the whole process. 
+
+### Superfiltering.D
+
+To run Superfiltering.D, please first install the ```submodlib``` package [here](https://github.com/decile-team/submodlib).<br>
+The step 1 and 2 are the same as the previous ones. 
+
+3. Select the data with diversity.
+```
+scripts/optional_select_data_plus_diversity.sh
+```
+
+```json_data_path```: The data path to save the data with IFD scores. <br>
+```json_save_path```: The data path to save the data with IFD scores filtered. <br>
+```ifd_num```: The number of data you want for the high-quality subset, selected by the Superfiltering. <br>
+```fla_num```: The number of data you want after implementing FacilityLocationFunction.
+
+Note: In our preliminary experiments, setting ```ifd_num``` as 20% of the full data and ```fla_num``` as 2% of the full data works fine for both Alpaca and Alpaca-GPT4 datasets. <br>
+Further experiments will be conducted. 
 
 ## Data
 
@@ -132,13 +152,14 @@ For other evaluation metrics, please see their official repo.
 
 ## ToDo
 - [x] Release the code, data, and models. 
-- [ ] Release new versions.
+- [x] Release Superfiltering with Diversity version
+- [ ] Release more results and models. 
 - [ ] Implement our method on more datasets and base models.  
 
 ## Citation
 
 Please consider citing our papers if you think our codes, data, or models are useful. Thank you! <br>
-The first paper is the Superfiltering paper, and the second one is the Cherry LLM paper, proposing IFD score, which serves as the backbone metric of Superfiltering.
+The first paper is the Superfiltering paper, and the second one is the Cherry LLM paper, proposing the IFD score, which serves as the backbone metric of Superfiltering.
 
 ```
 @article{Li2024SuperfilteringWD,
