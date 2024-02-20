@@ -16,21 +16,6 @@ if torch.cuda.is_available():
 else:
     device = "cpu"
 
-def gaussian_random_projection(X, k):
-    """
-    Project the data X into k dimensions using Gaussian random projection.
-    
-    Parameters:
-    - X: numpy array of shape (n, d) where n is the number of data points and d is the original dimensionality.
-    - k: target dimensionality (k << d).
-    
-    Returns:
-    - Projected data of shape (n, k).
-    """
-    n, d = X.shape
-    R = np.random.randn(d, k)  # Random projection matrix
-    Y = np.dot(X, R)
-    return Y
 
 def do_fla(X, number_all, number_select):
     start_time = time.time()
