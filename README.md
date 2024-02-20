@@ -14,10 +14,11 @@ The repo contains:
 - The data selected by Superfiltering.
 - The model checkpoints (7B) that were trained using our Superfiltering.
 
-(This repo is partially originated from [Cherry_LLM](https://github.com/MingLiiii/Cherry_LLM) and [Reflection_Tuning](https://github.com/tianyi-lab/Reflection_Tuning).)<br>
+(This repo partially originated from [Cherry_LLM](https://github.com/MingLiiii/Cherry_LLM) and [Reflection_Tuning](https://github.com/tianyi-lab/Reflection_Tuning).)<br>
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
+- [2024/02] We added the codes and introduction for **Superfiltering with Diveristy**, which can further compress the selected data to approximately 2%. 
 - [2024/02] We updated the repo of Superfiltering in which code and data were released. 
 - [2024/01] We released the Superfiltering paper!
 
@@ -33,6 +34,8 @@ The repo contains:
 
 ## Overview
 
+### Superfiltering
+
 Instruction tuning is critical to improve LLMs but usually suffers from low-quality and redundant data. 
 Data filtering for instruction tuning has proved important in improving both the efficiency and performance of the tuning process. 
 But it also leads to extra cost and computation due to the involvement of LLMs in this process. 
@@ -45,14 +48,24 @@ Extensive experiments validate the efficacy and efficiency of our approach.
 <a ><img src="images/intro.png" alt="overview" style="width: 50%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-**Top**: Comparison of data filtering for instruction tuning of a student model. (a) The filter model is a strong proprietary LLM, e.g. ChatGPT, which can be time-consuming and expensive but usually performs promisingly. (b) The filter model is the student model itself or a similar-sized open-source LLM, which is still time-consuming but free to use. (c) **Weak-to-strong superfiltering** proposed by this paper, which utilizes a much smaller filter model, e.g. GPT-2, to train a stronger student LLM. We find it costs much less time but maintains the performance. <br>
+**Top**: Comparison of data filtering for instruction tuning of a student model. (a) The filter model is a strong proprietary LLM, e.g. ChatGPT, which can be time-consuming and expensive but usually performs promisingly. (b) The filter model is the student model itself or a similar-sized open-source LLM, which is still time-consuming but free to use. (c) **Weak-to-strong Superfiltering** proposed by this paper, which utilizes a much smaller filter model, e.g. GPT-2, to train a stronger student LLM. We find it costs much less time but maintains the performance. <br>
 **Bottom**: Comparisons of two student models finetuned using 5% data selected by LLaMA2-7B and GPT-2 from the Alpaca dataset. (d) Both models trained on 5% data outperform the baseline model trained on 100% data. (e) GPT-2 as the superfilter speeds up data filtering by 20 times. 
+
+### Superfiltering with Diversity
+
+Motivated by recent work that further includes Diversity metrics in the data selection process, we introduce an extended version of Superfiltering, **Superfiltering** with **D**iversity (**Superfiltering.D**). We hypothesize that the diversity metrics work better when implemented on a high-quality data subset than the whole dataset with mixed quality. Thus we propose to first utilize Superfiltering to select a subset with relatively high quality, then further utilize [Facility Location Function](https://apricot-select.readthedocs.io/en/latest/functions/facilityLocation.html#:~:text=Facility%20location%20functions%20are%20general,and%20their%20nearest%20chosen%20point.) to further compress the selected data number. Compared with other diversity metrics, the Facility Location Function can strike a balance between capturing diversity and ensuring the representation of different clusters or regions within the data, it ensures a global view of the given high-quality subset. To further preserve the efficiency of our Superfiltering.D, we utilize ```sentence-transformers/all-MiniLM-L6-v2``` as the encoder, which only has approximately 80M parameters. In our preliminary experiments on the Alpaca and Alpaca-GPT4 dataset, where we first select 20% of the data by Superfiltering, then utilize the Facility Location Function to further select 2% of the data. **The models trained with 2% of the data have a comparable or better performance than full data models.** 
+
+The benefits of our **Superfiltering.D**:
+1. We can compress the data selected to 2%, which further greatly improves the efficiency of Instruction Tuning.
+2. This 2-step method, considering diversity only on the high-quality subset, relaxes the strong reliance on fancy encoders, ensuring that small encoders can work effectively.
+3. This 2-step method greatly improves the efficiency of the diversity metrics, both the encoder and the diversity metric only need to compute on a subset rather than the whole great dataset.
 
 ## Highlights
 
 * We reveal the **strong consistency between small and large LLMs in perceiving and evaluating the difficulty of instruction tuning data**, which provides insights into understanding the difference between small and large models. 
 * We propose the first method of Superfiltering that utilizes **a small LM, e.g., GPT-2 (124M), to select data for instruction tuning and brings significant speedups to the LLM finetuning pipeline**. 
 * Superfiltering is a **plug-and-play** method that precises in **allocating high-quality and informative data** improving LLM instruction tuning. 
+* Our preliminary experiments show that by adding a simple diversity metric, our **Superfiltering.D** can use **only 2% of the data to defeat the full data model** on Alpaca and Alpaca-GPT4. 
 
 ## Install
 
