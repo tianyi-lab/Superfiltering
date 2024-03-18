@@ -159,7 +159,6 @@ For other evaluation metrics, please see their official repo.
 ## Citation
 
 Please consider citing our papers if you think our codes, data, or models are useful. Thank you! <br>
-The first paper is the Superfiltering paper, and the second one is the Cherry LLM paper, proposing the IFD score, which serves as the backbone metric of Superfiltering.
 
 ```
 @article{Li2024SuperfilteringWD,
@@ -170,9 +169,16 @@ The first paper is the Superfiltering paper, and the second one is the Cherry LL
   volume={abs/2402.00530},
   url={https://api.semanticscholar.org/CorpusID:267365346}
 }
-```
 
-```
+@article{Li2024SelectiveRS,
+  title={Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning},
+  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Jiuxiang Gu and Tianyi Zhou},
+  journal={ArXiv},
+  year={2024},
+  volume={abs/2402.10110},
+  url={https://api.semanticscholar.org/CorpusID:267682220}
+}
+
 @article{Li2023FromQT,
   title={From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning},
   author={Ming Li and Yong Zhang and Zhitao Li and Jiuhai Chen and Lichang Chen and Ning Cheng and Jianzong Wang and Tianyi Zhou and Jing Xiao},
@@ -181,5 +187,7 @@ The first paper is the Superfiltering paper, and the second one is the Cherry LL
   volume={abs/2308.12032},
   url={https://api.semanticscholar.org/CorpusID:261076515}
 }
+
+
 ```
 
