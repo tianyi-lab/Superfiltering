@@ -180,35 +180,34 @@ Please consider citing our papers if you think our codes, data, or models are us
 }
 
 @inproceedings{li-etal-2024-quantity,
-    title = "From Quantity to Quality: Boosting {LLM} Performance with Self-Guided Data Selection for Instruction Tuning",
-    author = "Li, Ming  and
-      Zhang, Yong  and
-      Li, Zhitao  and
-      Chen, Jiuhai  and
-      Chen, Lichang  and
-      Cheng, Ning  and
-      Wang, Jianzong  and
-      Zhou, Tianyi  and
-      Xiao, Jing",
-    editor = "Duh, Kevin  and
-      Gomez, Helena  and
-      Bethard, Steven",
-    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
-    month = jun,
-    year = "2024",
-    address = "Mexico City, Mexico",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.naacl-long.421",
-    pages = "7595--7628",
+  title = "From Quantity to Quality: Boosting {LLM} Performance with Self-Guided Data Selection for Instruction Tuning",
+  author = "Li, Ming  and
+    Zhang, Yong  and
+    Li, Zhitao  and
+    Chen, Jiuhai  and
+    Chen, Lichang  and
+    Cheng, Ning  and
+    Wang, Jianzong  and
+    Zhou, Tianyi  and
+    Xiao, Jing",
+  editor = "Duh, Kevin  and
+    Gomez, Helena  and
+    Bethard, Steven",
+  booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+  month = jun,
+  year = "2024",
+  address = "Mexico City, Mexico",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2024.naacl-long.421",
+  pages = "7595--7628",
 }
 
-@inproceedings{
-li2023reflectiontuning,
-title={Reflection-Tuning: Recycling Data for Better Instruction-Tuning},
-author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Tianyi Zhou},
-booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
-year={2023},
-url={https://openreview.net/forum?id=xaqoZZqkPU}
+@inproceedings{li2023reflectiontuning,
+  title={Reflection-Tuning: Recycling Data for Better Instruction-Tuning},
+  author={Ming Li and Lichang Chen and Jiuhai Chen and Shwai He and Tianyi Zhou},
+  booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
+  year={2023},
+  url={https://openreview.net/forum?id=xaqoZZqkPU}
 }
 
 ```
