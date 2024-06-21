@@ -6,7 +6,7 @@
 <a ><img src="images/fast_alpaca.png" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-This is the repo for the Superfiltering project, which introduces a method **astonishingly utilizes a small GPT2 (124M) model to successfully filter out the high-quality subset from existing GPT4-generated instruction tuning dataset.**
+This is the repo for the Superfiltering project, which introduces a method **astonishingly utilizes a small GPT2 (124M) model to successfully filter out the high-quality subset from the existing GPT4-generated instruction tuning dataset.**
 
 The repo contains:
 
@@ -18,6 +18,7 @@ The repo contains:
 (Feel free to email minglii@umd.edu for any questions or feedback.)
 
 ## News
+- [2024/05] Our paper has been accepted to the **ACL 2024** main conference! 
 - [2024/02] We added the codes and introduction for **Superfiltering with Diveristy** version, which can further compress the selected data to approximately **2%**. 
 - [2024/02] We updated the repo of Superfiltering in which code and data were released. 
 - [2024/01] We released the Superfiltering paper!
