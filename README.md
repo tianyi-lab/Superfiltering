@@ -1,6 +1,7 @@
 # Superfiltering: Weak-to-Strong Data Filtering (ACL'24)
 
-[Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/abs/2402.00530) (ACL'24)
+[Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/abs/2402.00530) (ACL'24)<br>
+Chinese Version: [[知乎]](https://zhuanlan.zhihu.com/p/718119728)
 
 <p align="center" width="40%">
 <a ><img src="images/fast_alpaca.png" alt="overview" style="width: 40%; min-width: 300px; display: block; margin: auto;"></a>
