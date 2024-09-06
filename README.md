@@ -16,7 +16,7 @@ The repo contains:
 - The model checkpoints (7B) that were trained using our Superfiltering.
 
 (This repo partially originated from [Cherry_LLM](https://github.com/MingLiiii/Cherry_LLM) and [Reflection_Tuning](https://github.com/tianyi-lab/Reflection_Tuning).)<br>
-(Feel free to email minglii@umd.edu for any questions or feedback.)
+(Feel free to email Ming ([Homepage](https://mingliiii.github.io/), [Email](minglii@umd.edu)) for any questions or feedback.)
 
 ## News
 - [2024/05] Our paper has been accepted to the **ACL 2024** main conference! 
